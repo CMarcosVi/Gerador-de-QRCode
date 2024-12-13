@@ -27,6 +27,10 @@ strong{
     min-width: 300px;
     margin:20px 0;
 }
+svg{
+    height: 400px;
+    width: 400px;
+}
 button{
     text-transform: uppercase;
     color: #fff;
