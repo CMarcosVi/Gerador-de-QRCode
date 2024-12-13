@@ -9,7 +9,7 @@ function gerarQRCode() {
     
     QRCode.toDataURL(texto, {
         errorCorrectionLevel: 'H',
-        type: 'image/png',
+        type: 'image/svg',
         color: {
             dark: '#000000',
             light: '#0000'
