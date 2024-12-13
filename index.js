@@ -9,7 +9,7 @@ function gerarQRCode() {
     
     QRCode.toDataURL(texto, {
         errorCorrectionLevel: 'H',
-        type: 'image/svg',
+        type: 'svg',
         color: {
             dark: '#000000',
             light: '#0000'
@@ -18,7 +18,7 @@ function gerarQRCode() {
         if (err) {
             console.error(err);
         } else {
-            qrCodeImage.src = url;
+            qrCodeImage.innerHTML = svg;;
             qrCodeImage.style.display = "block";
         }
     });
