@@ -1,4 +1,4 @@
-        function gerarQRCode() {
+      function gerarQRCode() {
             const texto = document.getElementById('inputText').value;
             
             if (!texto) {
@@ -7,6 +7,7 @@
             }
             
             const qrCodeImage = document.getElementById('qrCodeImage');
+            const downloadLink = document.getElementById('downloadLink');
             
             QRCode.toString(texto, {
                 errorCorrectionLevel: 'H',
@@ -22,6 +23,14 @@
                 } else {
                     qrCodeImage.innerHTML = svg; // Inserindo o SVG gerado dentro do div
                     qrCodeImage.style.display = "block"; // Exibindo o div com o SVG
+
+                    // Criando o Blob para o download
+                    const blob = new Blob([svg], { type: 'image/svg+xml' });
+                    const url = URL.createObjectURL(blob);
+                    
+                    // Atualizando o link de download
+                    downloadLink.href = url;
+                    downloadLink.style.display = "inline"; // Exibindo o link de download
                 }
             });
         }
