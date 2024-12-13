@@ -9,12 +9,13 @@
 <body>
     <h1>Gerador de <strong>QR Code</strong></h1>
     <p>Digite o texto para gerar o <strong>QR Code</strong>:</p>
+    <a id="downloadLink" href="" download="qrCode.svg">Baixar QR Code</a>
     <input type="text" id="inputText" placeholder="Digite o Link">
     <button onclick="gerarQRCode()">Gerar QR Code</button>
     <div>
         <div id="qrCodeImage" src="" alt="QR Code" style="display:none;"><div/>
     </div>
-    <a id="downloadLink" href="" download="qrCode.svg">Baixar QR Code</a> <!-- Link de download -->
+     <!-- Link de download -->
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode/1.5.0/qrcode.min.js"></script>
