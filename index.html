@@ -10,11 +10,11 @@
     <h1>Gerador de <strong>QR Code</strong></h1>
     <p>Digite o texto para gerar o <strong>QR Code</strong>:</p>
     <input type="text" id="inputText" placeholder="Digite o Link">
-    <a id="downloadLinkSVG" href="" download="qrCode.svg">Baixar QR Code (SVG)</a>
-    <a id="downloadLinkPNG" href="" download="qrCode.png">Baixar QR Code (PNG)</a>
+    <a id="downloadLinkSVG" href="" download="qrCode.svg" style="display:none;">Baixar QR Code (SVG)</a>
+    <a id="downloadLinkPNG" href="" download="qrCode.png" style="display:none;">Baixar QR Code (PNG)</a>
     <button onclick="gerarQRCode()">Gerar QR Code</button>
     <div>
-        <div id="qrCodeImage" src="" style="color: #fff !important" alt="QR Code" style="display:none;"></div>
+        <div id="qrCodeImage" alt="QR Code" style="display:none;"></div>
     </div>
 
     <h1>Gerador de Link <strong>WPP</strong></h1>
@@ -24,6 +24,7 @@
     <div>
         <p id="linkGenerator"></p>
     </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode/1.5.0/qrcode.min.js"></script>
     <script src="index.js"></script>
 </body>
