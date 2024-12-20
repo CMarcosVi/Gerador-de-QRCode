@@ -1,4 +1,4 @@
-<style>
+
     #inputNumber,#inputMensagem{
         margin: 10px 0 ;
     }
@@ -78,5 +78,3 @@ div{
     background-color: #ff6e28;
     transition: .25s;
 }
-
-</style>
