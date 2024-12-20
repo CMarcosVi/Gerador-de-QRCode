@@ -38,6 +38,7 @@ btnGeneratorWpp.addEventListener("click", () => {
 });
 
 // Função para gerar o QR Code
+// Função para gerar o QR Code
 function gerarQRCode() {
     const texto = document.getElementById('inputText').value;
 
@@ -74,7 +75,7 @@ function gerarQRCode() {
             downloadLinkSVG.href = urlSVG;
             downloadLinkSVG.style.display = "inline"; // Exibe o link de download para SVG
 
-            // Gerar QR Code em PNG
+            // Gerar QR Code em PNG (base64)
             QRCode.toDataURL(texto, {
                 errorCorrectionLevel: 'H',
                 type: 'image/png',
@@ -82,17 +83,14 @@ function gerarQRCode() {
                     dark: '#000000', // Cor do QR code (preto)
                     light: '#0000'   // Fundo transparente
                 }
-            }, (err, png) => {
+            }, (err, pngDataUrl) => {
                 if (err) {
                     console.error(err);
                     alert("Erro ao gerar o QR Code. Tente novamente.");
                 } else {
-                    // Criando o Blob para o download do PNG
-                    const blobPNG = new Blob([png], { type: 'image/png' });
-                    const urlPNG = URL.createObjectURL(blobPNG);
-
-                    // Atualizando o link de download para PNG
-                    downloadLinkPNG.href = urlPNG;
+                    // Atualizando o link de download para PNG com URL base64
+                    downloadLinkPNG.href = pngDataUrl;
+                    downloadLinkPNG.download = "qrCode.png";  // Definindo o nome do arquivo a ser baixado
                     downloadLinkPNG.style.display = "inline"; // Exibe o link de download para PNG
                 }
             });
