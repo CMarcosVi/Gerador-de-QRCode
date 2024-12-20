@@ -1,11 +1,4 @@
-
-    #inputNumber,#inputMensagem{
-        margin: 10px 0 ;
-    }
-    #linkGenerator{
-        color: #000;
-    }
-    body{
+ body{
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -78,3 +71,4 @@ div{
     background-color: #ff6e28;
     transition: .25s;
 }
+
