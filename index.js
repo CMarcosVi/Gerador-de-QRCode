@@ -29,7 +29,7 @@ function gerarLinkWpp() {
     }
 
     // Gerando o link do WhatsApp com número e mensagem
-    linkGenerator.innerHTML = `https://api.whatsapp.com/send?phone=+55${numberPhone}&text=${encodeURIComponent(mensagemWpp)}`;
+    linkGenerator.innerHTML = `https://api.whatsapp.com/send?phone=55${numberPhone}&text=${encodeURIComponent(mensagemWpp)}`;
 }
 
 const btnGeneratorWpp = document.getElementById("btnGenerator");
