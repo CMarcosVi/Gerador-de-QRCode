@@ -1,8 +1,8 @@
 // Validação para o campo de número de telefone
 document.getElementById('inputNumber').addEventListener('input', function(event) {
     this.value = this.value.replace(/\D/g, ''); // Remove caracteres não numéricos
-    if (this.value.length > 11) {
-        this.value = this.value.slice(0, 11); // Limita a 11 dígitos
+    if (this.value.length > 13) {
+        this.value = this.value.slice(0, 13); // Limita a 11 dígitos
     }
 });
 
